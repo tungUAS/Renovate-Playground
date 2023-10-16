@@ -2,7 +2,7 @@ const request = require("supertest");
 const app = require("./app");
 
 describe("GET /users", () => {
-  test("returns a list of users", async () => {
+  it("returns a list of users", async () => {
     const response = await request(app).get("/users");
     expect(response.status).toBe(200);
     expect(response.body).toEqual([
